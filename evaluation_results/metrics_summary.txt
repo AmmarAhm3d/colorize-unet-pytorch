@@ -1,0 +1,31 @@
+OBJECTIVE FIDELITY METRICS EVALUATION RESULTS
+============================================================
+Model: final_colorization_model.pth
+Dataset: coco/images/val2017
+Number of samples: 100
+------------------------------------------------------------
+
+PSNR:
+  Mean: 26.5220
+  Std:  4.8943
+  Min:  17.0207
+  Max:  43.4693
+
+SSIM:
+  Mean: 0.9170
+  Std:  0.0604
+  Min:  0.6481
+  Max:  0.9972
+
+RMSE:
+  Mean: 13.8166
+  Std:  6.9586
+  Min:  1.7103
+  Max:  35.9341
+
+SNR:
+  Mean: 20.4510
+  Std:  5.3155
+  Min:  9.7937
+  Max:  39.4339
+
