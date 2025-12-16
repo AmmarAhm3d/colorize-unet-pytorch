@@ -1,11 +1,14 @@
 # colorize-unet-pytorch
 
+[![PyTorch](https://img.shields.io/badge/PyTorch-%3E%3D1.0-black?logo=pytorch)](https://pytorch.org)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)](https://www.python.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](/LICENSE)
+[![Gradio Demo](https://img.shields.io/badge/Gradio-Demo-brightgreen?logo=gradio)](https://huggingface.co/spaces/Marrro90123/colorize-unet-pytorch)
+[![Hugging Face Space](https://img.shields.io/badge/Hugging%20Face-Space-ff6f00?logo=huggingface)](https://huggingface.co/spaces/Marrro90123/colorize-unet-pytorch)
+
 PyTorch U‑Net image colorization (LAB color space) — trained on COCO, includes evaluation (PSNR/SSIM/RMSE/SNR) and a Gradio demo.
 
-[![PyTorch](https://img.shields.io/badge/PyTorch-%3E%3D1.0-black)](https://pytorch.org)
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](/LICENSE)
-[![Demo](https://img.shields.io/badge/Gradio-Demo-green)](#)
+---
 
 ## 📋 Project Information
 
@@ -17,11 +20,21 @@ PyTorch U‑Net image colorization (LAB color space) — trained on COCO, includ
 
 ---
 
+## 🔗 Live demo
+
+A live Gradio demo is available on Hugging Face Spaces:
+
+- Hugging Face Space (Gradio demo): https://huggingface.co/spaces/Marrro90123/colorize-unet-pytorch
+
+You can open the demo to try the model in the browser without installing anything locally.
+
+---
+
 ## 🎯 Abstract
 
-Automatic colorization of grayscale images is an ill-posed, one-to-many problem that has seen significant progress with deep learning. However, existing methods, particularly standard convolutional encoder-decoders like U-Net, often produce desaturated or spatially inconsistent colors due to an over-reliance on local pixel-level features. 
+Automatic colorization of grayscale images is an ill-posed, one-to-many problem that has seen significant progress with deep learning. However, existing methods, particularly standard convolutional en[...]
 
-This project implements a **U-Net architecture from scratch** for automatic image colorization. The model converts grayscale (L*) images to color by predicting the color channels (a*, b*) in the LAB color space. We train the model on the COCO dataset using L1 loss for optimization and evaluate performance using comprehensive objective fidelity metrics including PSNR, SSIM, RMSE, and SNR.
+This project implements a **U-Net architecture from scratch** for automatic image colorization. The model converts grayscale (L*) images to color by predicting the color channels (a*, b*) in the LAB c[...]
 
 ---
 
@@ -113,7 +126,7 @@ class UNet(nn.Module):
 
 3. **Results:**
    - Training completed in ~2 hours on GPU
-   - Final loss: 0.0717 (Epoch 24 shown)
+   - Final loss: 0.0717 (Epoch 24)
    - 50 model checkpoints saved
    - Visual samples saved every epoch
 
@@ -210,11 +223,15 @@ This will:
 
 ### Running the Demo App
 
-Launch the Gradio web interface:
+Launch the Gradio web interface locally:
 
 ```bash
 python app.py
 ```
+
+Or try the hosted demo on Hugging Face Spaces:
+
+- https://huggingface.co/spaces/Marrro90123/colorize-unet-pytorch
 
 The app will:
 - Start a web server with a user-friendly interface
@@ -298,7 +315,7 @@ Run `python evaluation.py` to generate comprehensive metrics including:
 ✅ **Proper Dataset:** COCO 2017 (5k+ images)  
 ✅ **Objective Evaluation:** PSNR, SSIM, RMSE, SNR metrics  
 ✅ **Documentation:** Complete technical documentation  
-✅ **Deployment:** Working Gradio demo application  
+✅ **Deployment:** Working Gradio demo application (hosted on Hugging Face Spaces)
 
 ---
 
@@ -333,7 +350,7 @@ Run `python evaluation.py` to generate comprehensive metrics including:
 
 ## 📝 License
 
-This project is for academic purposes as part of a Digital Image Processing course.
+This project is for academic purposes as part of a Digital Image Processing course. Licensed under the MIT License — see [LICENSE](/LICENSE).
 
 ---
 
@@ -347,3 +364,4 @@ This project is for academic purposes as part of a Digital Image Processing cour
 ---
 
 **For questions or issues, please refer to the code documentation or contact the development team.**
+```
